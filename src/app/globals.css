@@ -55,3 +55,37 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* --- Acordeón de FAQ ---------------------------------------------------
+   <details> nativo. Solo quitamos el triángulo por defecto y damos a la
+   respuesta una entrada suave; el chevron lo rota Tailwind con group-open. */
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq[open] .faq-answer {
+  animation: faq-open 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq[open] .faq-answer {
+    animation: none;
+  }
+
+  /* El chevron gira, pero sin transición. */
+  .faq svg {
+    transition: none;
+  }
+}

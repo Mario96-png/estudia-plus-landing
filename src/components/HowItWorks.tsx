@@ -39,7 +39,7 @@ export default function HowItWorks() {
                 {i < STEPS.length - 1 && (
                   <span
                     aria-hidden="true"
-                    className="absolute left-24 top-8 hidden h-px w-[calc(100%-4rem)] bg-ink/15 md:block"
+                    className="absolute left-32 top-8 hidden h-px w-[calc(100%-6rem)] bg-ink/15 md:block"
                   />
                 )}
 
