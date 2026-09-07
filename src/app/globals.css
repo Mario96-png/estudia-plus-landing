@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4 (instalado por create-next-app) usa configuración CSS-first.
+  No hay tailwind.config.ts: el tema vive aquí, en @theme.
+  Paleta y tipografía IDÉNTICAS a la app Estudia+ (~/estudia-plus).
+*/
+@theme {
+  --color-bg: #F2EBDC;
+  --color-bg-alt: #E8DEC9;
+  --color-paper: #FFFFFF;
+  --color-ink: #1F1B16;
+  --color-ink-soft: #665E50;
+  --color-accent: #AB3D1D;
+  --color-accent-dark: #8A2E15;
+  --color-info: #466575;
+  --color-green: #6B8F71;
+  --color-amber: #7F5C0E;
+  --color-red: #B33A2A;
+
+  --font-serif: var(--font-lora), Lora, Georgia, serif;
+  --font-sans: var(--font-inter), Inter, system-ui, sans-serif;
+}
+
+html {
+  /* Lenis controla el scroll; sin esto el navegador pelea con la animación. */
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
