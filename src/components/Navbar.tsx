@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@vercel/analytics";
 import Link from "next/link";
 
 const APP_URL = "https://app.estudia.plus";
@@ -48,6 +49,7 @@ export default function Navbar() {
           ))}
           <a
             href={APP_URL}
+            onClick={() => track("navbar_entrar_click")}
             className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-bg transition-[filter] duration-200 hover:brightness-110"
           >
             Entrar

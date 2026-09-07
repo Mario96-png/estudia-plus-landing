@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lora, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
@@ -59,6 +61,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col font-sans bg-bg text-ink">
         <SmoothScroll>{children}</SmoothScroll>
+        {/* Ambos se desactivan solos fuera de producción, así que en local no
+            ensucian los datos. Sin cookies: no hacen falta banner ni consent. */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

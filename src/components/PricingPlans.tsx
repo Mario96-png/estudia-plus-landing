@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
+import { track } from "@vercel/analytics";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
 
@@ -121,6 +122,7 @@ export default function PricingPlans() {
 
             <a
               href={APP_URL}
+              onClick={() => track("cta_free_click")}
               className="mt-8 block rounded-full border border-ink px-8 py-3 text-center font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-bg"
             >
               Empezar ahora
@@ -180,6 +182,7 @@ export default function PricingPlans() {
 
             <a
               href={`${APP_URL}?plan=premium`}
+              onClick={() => track("cta_premium_click", { billing })}
               className="mt-8 block rounded-full bg-bg px-8 py-3 text-center font-medium text-accent transition-[filter] duration-200 hover:brightness-95"
             >
               Empezar Premium

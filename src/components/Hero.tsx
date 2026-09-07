@@ -1,5 +1,6 @@
 "use client";
 
+import { track } from "@vercel/analytics";
 import { motion, useReducedMotion } from "framer-motion";
 import HeroGradient from "@/components/HeroGradient";
 import CursorBlob from "@/components/CursorBlob";
@@ -60,6 +61,7 @@ export default function Hero() {
           <motion.a
             href={APP_URL}
             target="_self"
+            onClick={() => track("empezar_gratis_click", { section: "hero" })}
             whileHover={hover}
             whileTap={tap}
             transition={springy}
