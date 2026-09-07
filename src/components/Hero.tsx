@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import HeroGradient from "@/components/HeroGradient";
+import CursorBlob from "@/components/CursorBlob";
 
 const APP_URL = "https://app.estudia.plus";
 
@@ -30,6 +31,9 @@ export default function Hero() {
   return (
     <section className="relative flex h-screen items-center overflow-hidden">
       <HeroGradient />
+      {/* Va entre el fondo (z-0) y el texto (z-10). El overflow-hidden de la
+          section es lo que impide que se vea al scrollear a otra sección. */}
+      <CursorBlob />
 
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 text-center">
         <motion.h1

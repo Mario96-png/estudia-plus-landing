@@ -20,15 +20,15 @@ const inter = Inter({
 const title = "Estudia+ | Aprende de verdad, no aprendas atajos";
 const description =
   "El primer tutor IA que te enseña a estudiar. Coach socrático, flashcards inteligentes y adaptación a tu sistema educativo (IGCSE, IB, A-Levels, LOMLOE).";
-const ogImage = "/og-placeholder.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://estudia.plus"),
   title,
   description,
   applicationName: "Estudia+",
-  // El favicon lo detecta Next solo desde src/app/favicon.ico. Declararlo aquí
-  // además duplicaba el <link rel="icon"> en el HTML.
+  // Iconos y tarjetas sociales van por convención de ficheros en src/app/
+  // (icon.svg, apple-icon.tsx, opengraph-image.tsx, twitter-image.tsx).
+  // Declararlos aquí además duplicaría las etiquetas en el HTML.
   openGraph: {
     type: "website",
     url: "https://estudia.plus",
@@ -36,21 +36,13 @@ export const metadata: Metadata = {
     title,
     description,
     locale: "es_ES",
-    images: [
-      {
-        // TODO: OG real. De momento un lienzo crema del color de marca.
-        url: ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Estudia+ — Aprende de verdad, no aprendas atajos",
-      },
-    ],
+    // La imagen la aporta src/app/opengraph-image.tsx por convención.
   },
   twitter: {
     card: "summary_large_image",
     title,
     description,
-    images: [ogImage],
+    // Idem: src/app/twitter-image.tsx.
   },
 };
 

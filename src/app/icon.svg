@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect width="256" height="256" rx="32" fill="#F2EBDC"/>
+  <!-- La E va como texto serif del sistema: a 16px un trazo fino se empasta,
+       por eso weight 600. El "+" va en rects y no en texto para que siga
+       siendo nítido al tamaño de pestaña. -->
+  <text x="93" y="205" fill="#AB3D1D" font-family="Georgia, 'Times New Roman', serif"
+        font-size="176" font-weight="600" text-anchor="middle">E</text>
+  <rect x="157" y="77" width="60" height="20" rx="6" fill="#AB3D1D"/>
+  <rect x="187" y="57" width="20" height="60" rx="6" fill="#AB3D1D"/>
+</svg>
