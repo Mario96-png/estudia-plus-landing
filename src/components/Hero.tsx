@@ -1,52 +1,92 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import HeroGradient from "@/components/HeroGradient";
 
 const APP_URL = "https://app.estudia.plus";
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
 
-  // Con reduced motion el contenido entra ya colocado, sin transición.
+  /** fade + slideUp de entrada. Con reduced motion no devuelve props: el
+   *  elemento se pinta directamente en su sitio. */
   const rise = (delay: number) =>
     reduceMotion
       ? {}
       : {
-          initial: { opacity: 0, y: 28 },
+          initial: { opacity: 0, y: 24 },
           animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] as const },
+          transition: {
+            duration: 0.7,
+            delay,
+            ease: [0.22, 1, 0.36, 1] as const,
+          },
         };
 
+  const hover = reduceMotion ? undefined : { scale: 1.03 };
+  const tap = reduceMotion ? undefined : { scale: 0.99 };
+  const springy = { type: "spring" as const, stiffness: 400, damping: 26 };
+
   return (
-    <section className="flex min-h-screen items-center">
-      <div className="mx-auto w-full max-w-6xl px-6 py-24">
+    <section className="relative flex h-screen items-center overflow-hidden">
+      <HeroGradient />
+
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 text-center">
         <motion.h1
           {...rise(0)}
-          className="max-w-4xl font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-6xl md:text-7xl"
+          className="font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-7xl"
         >
-          Aprende de verdad, no aprendas atajos
+          Aprende de verdad,
+          <br />
+          no aprendas atajos.
         </motion.h1>
 
         <motion.p
-          {...rise(0.5)}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-soft sm:text-xl"
+          {...rise(0.15)}
+          className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl"
         >
-          Estudia+ convierte tus apuntes en preguntas, repaso y comprensión real.
-          La IA te acompaña mientras estudias — no estudia por ti.
+          El primer tutor IA que te enseña a estudiar, en lugar de darte las
+          respuestas.
         </motion.p>
 
-        <motion.div {...rise(1)} className="mt-12">
+        <motion.div
+          {...rise(0.3)}
+          className="mt-10 flex flex-col justify-center gap-4 sm:flex-row"
+        >
           <motion.a
             href={APP_URL}
-            whileHover={reduceMotion ? undefined : { scale: 1.02 }}
-            whileTap={reduceMotion ? undefined : { scale: 0.99 }}
-            transition={{ type: "spring", stiffness: 400, damping: 24 }}
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 text-base font-medium text-bg shadow-lg shadow-accent/20 transition-[background-color,box-shadow] hover:bg-accent-dark hover:shadow-xl hover:shadow-accent/30"
+            target="_self"
+            whileHover={hover}
+            whileTap={tap}
+            transition={springy}
+            className="rounded-full bg-accent px-8 py-3 font-medium text-bg shadow-lg shadow-accent/20 transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-accent/40"
           >
-            Empezar gratis
-            <span aria-hidden="true">→</span>
+            Empezar gratis →
+          </motion.a>
+
+          <motion.a
+            href="#how-it-works"
+            whileHover={hover}
+            whileTap={tap}
+            transition={springy}
+            className="rounded-full border border-ink px-8 py-3 font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-bg"
+          >
+            Ver cómo funciona
           </motion.a>
         </motion.div>
+
+        <motion.p
+          {...(reduceMotion
+            ? {}
+            : {
+                initial: { opacity: 0 },
+                animate: { opacity: 1 },
+                transition: { duration: 0.6, delay: 0.5 },
+              })}
+          className="mt-6 text-sm text-ink-soft"
+        >
+          Sin tarjeta. 30 segundos para empezar.
+        </motion.p>
       </div>
     </section>
   );

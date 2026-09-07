@@ -9,10 +9,10 @@ export default function Footer() {
         <p className="text-sm text-ink-soft">© 2026 Estudia+</p>
 
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-          <Link href="#producto" className="transition-colors hover:text-ink">
+          <Link href="#features" className="transition-colors hover:text-ink">
             Producto
           </Link>
-          <Link href="#precios" className="transition-colors hover:text-ink">
+          <Link href="#pricing" className="transition-colors hover:text-ink">
             Precios
           </Link>
           <Link href="#faq" className="transition-colors hover:text-ink">

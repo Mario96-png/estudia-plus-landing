@@ -23,8 +23,19 @@
 }
 
 html {
-  /* Lenis controla el scroll; sin esto el navegador pelea con la animación. */
   scrollbar-gutter: stable;
+  /* Fallback si Lenis no arranca (JS deshabilitado, error, hidratación lenta). */
+  scroll-behavior: smooth;
+}
+
+/* Lenis pone esta clase mientras controla el scroll: ahí el nativo estorba. */
+html.lenis {
+  scroll-behavior: auto;
+}
+
+/* La navbar es fija: los anclas no deben quedar debajo de ella. */
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 body {
@@ -39,7 +50,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html,
+  html.lenis {
     scroll-behavior: auto;
   }
 }
