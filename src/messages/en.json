@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Estudia+ | Learn it for real. No shortcuts.",
+    "description": "The first AI tutor that teaches you how to study. Socratic coach, smart flashcards and support for your exam board (IGCSE, IB, A-Levels, AP, US High School).",
+    "ogSubtitle": "The first AI tutor that teaches you how to study.",
+    "ogAlt": "Estudia+ — Learn it for real. No shortcuts.",
+    "ogLocale": "en_US"
+  },
+  "nav": {
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "enter": "Log in",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "titleLine1": "Learn it for real.",
+    "titleLine2": "No shortcuts.",
+    "subtitle": "The first AI tutor that teaches you how to study — instead of handing you the answers.",
+    "ctaPrimary": "Start free →",
+    "ctaSecondary": "See how it works",
+    "note": "No credit card. 30 seconds to start."
+  },
+  "problem": {
+    "eyebrow": "The problem with AI",
+    "title": "Today's shortcuts are tomorrow's bad grades.",
+    "cards": [
+      {
+        "title": "ChatGPT gives you the answer",
+        "body": "You copy, you paste, you pass that day. But in the exam, with no ChatGPT, your mind goes blank."
+      },
+      {
+        "title": "Photomath solves it for you",
+        "body": "You see the solution but never learn the method. Change the numbers and you're stuck again."
+      },
+      {
+        "title": "Estudia+ makes you think",
+        "body": "Graduated hints, a Socratic coach, similar exercises. You learn it FOR REAL — and you show it in the exam."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "title": "From stuck to mastery, in 3 steps",
+    "steps": [
+      {
+        "title": "Upload your notes or paste the problem",
+        "body": "PDF, photo or text. Estudia+ processes the material and picks out the key concepts."
+      },
+      {
+        "title": "The Coach guides you with hints, never with answers",
+        "body": "A three-level Socratic system. If you've genuinely tried, you move fast. If you're after a shortcut, it sends you back to think."
+      },
+      {
+        "title": "You keep what you learn with smart flashcards",
+        "body": "The scientific FSRS algorithm (the same one Anki uses). You review right before you'd forget. Maximum retention, minimum effort."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Why Estudia+",
+    "title": "What no other app puts together",
+    "items": [
+      {
+        "title": "A proven Socratic method",
+        "body": "Studies show 3× better learning than tools that hand over the answer. You learn to think for yourself."
+      },
+      {
+        "title": "Built for your exam board",
+        "body": "IGCSE, IB, A-Levels, AP, US High School, LOMLOE. Estudia+ knows the command words, the mark schemes and the house style of each one."
+      },
+      {
+        "title": "Flashcards powered by FSRS",
+        "body": "The same scientific algorithm as Anki. It schedules every review at the optimal moment: maximum retention, minimum time."
+      },
+      {
+        "title": "Academic integrity, built in",
+        "body": "An anti-cheating filter: no attempt, no help. Designed for learning, not for copying."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Start free. Upgrade when you're ready.",
+    "subtitle": "No lock-in. Cancel in one click.",
+    "studentNote": "Got a student ID? Write to us and we'll sort something out.",
+    "billingLabel": "Billing period",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "save": "Save 17%",
+    "free": {
+      "label": "Free",
+      "period": "forever",
+      "cta": "Start now",
+      "features": [
+        "3 active subjects",
+        "15 generations a month",
+        "Homework Coach (10 sessions/day)",
+        "Unlimited FSRS flashcards",
+        "5 mock exams a month",
+        "Dark and automatic mode"
+      ]
+    },
+    "premium": {
+      "label": "Premium",
+      "badge": "Most popular",
+      "cta": "Start Premium",
+      "perYear": "/year",
+      "perMonth": "/month",
+      "monthlyEquivalent": "$2.50/month",
+      "features": [
+        "Unlimited subjects",
+        "Unlimited generations",
+        "Unlimited Homework Coach",
+        "Unlimited FSRS flashcards",
+        "Unlimited mock exams",
+        "Priority AI responses",
+        "New features before anyone else"
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "Everything you need to know",
+    "items": [
+      {
+        "q": "Can I use Estudia+ on my phone?",
+        "a": "Yes. Estudia+ is a PWA (Progressive Web App), so you can install it on iOS and Android just like a native app, and the essentials work offline. No App Store required."
+      },
+      {
+        "q": "What languages is it available in?",
+        "a": "The interface is in Spanish and English. Your subject content can be in any language you like, and you can even mix them: “Biología” in Spanish and “History” in English in the same account."
+      },
+      {
+        "q": "Is it safe for academic use?",
+        "a": "Yes — it is built precisely to protect your academic integrity. The Homework Coach has an anti-shortcut filter: if you haven't tried to solve the exercise first, you don't get help. And the hints are graduated, never straight solutions. Estudia+ helps you learn, not copy."
+      },
+      {
+        "q": "Can I cancel whenever I want?",
+        "a": "Yes, in one click from your profile. No phone calls, no emails, no lock-in. And if you are on the yearly plan, we refund the part you haven't used."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Learn it for real. No shortcuts.",
+    "copyright": "© 2026 Estudia+. Made with care in Spain.",
+    "madeBy": "Built by students, for students.",
+    "soon": "Coming soon",
+    "soonSuffix": " (coming soon)",
+    "product": {
+      "title": "Product",
+      "howItWorks": "How it works",
+      "features": "Features",
+      "pricing": "Pricing",
+      "faq": "FAQ"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Blog",
+      "igcse": "IGCSE guide",
+      "ib": "IB guide",
+      "alevels": "A-Levels guide"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "contact": "Contact"
+    },
+    "socials": {
+      "x": "Estudia+ on X",
+      "instagram": "Estudia+ on Instagram",
+      "github": "Estudia+ on GitHub"
+    }
+  }
+}

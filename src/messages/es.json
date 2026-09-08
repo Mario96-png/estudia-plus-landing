@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "title": "Estudia+ | Aprende de verdad, no aprendas atajos",
+    "description": "El primer tutor IA que te enseña a estudiar. Coach socrático, flashcards inteligentes y adaptación a tu sistema educativo (IGCSE, IB, A-Levels, LOMLOE).",
+    "ogSubtitle": "El primer tutor IA que te enseña a estudiar.",
+    "ogAlt": "Estudia+ — Aprende de verdad, no aprendas atajos",
+    "ogLocale": "es_ES"
+  },
+  "nav": {
+    "howItWorks": "Cómo funciona",
+    "pricing": "Precios",
+    "enter": "Entrar",
+    "languageLabel": "Idioma"
+  },
+  "hero": {
+    "titleLine1": "Aprende de verdad,",
+    "titleLine2": "no aprendas atajos.",
+    "subtitle": "El primer tutor IA que te enseña a estudiar, en lugar de darte las respuestas.",
+    "ctaPrimary": "Empezar gratis →",
+    "ctaSecondary": "Ver cómo funciona",
+    "note": "Sin tarjeta. 30 segundos para empezar."
+  },
+  "problem": {
+    "eyebrow": "El problema con la IA",
+    "title": "Los atajos hoy son malas notas mañana.",
+    "cards": [
+      {
+        "title": "ChatGPT te da la respuesta",
+        "body": "Copias, pegas, apruebas ese día. Pero en el examen, sin ChatGPT, te quedas en blanco."
+      },
+      {
+        "title": "Photomath resuelve por ti",
+        "body": "Ves la solución pero no aprendes el método. Cuando cambian los números, no sabes qué hacer."
+      },
+      {
+        "title": "Estudia+ te hace pensar",
+        "body": "Pistas graduales, coach socrático, ejercicios similares. Aprendes DE VERDAD y lo demuestras en el examen."
+      }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Cómo funciona",
+    "title": "Del atasco a dominar el tema, en 3 pasos",
+    "steps": [
+      {
+        "title": "Sube tus apuntes o pega el ejercicio",
+        "body": "PDF, foto o texto. Estudia+ procesa el material y detecta los conceptos clave."
+      },
+      {
+        "title": "El Coach te guía con pistas, nunca con respuestas",
+        "body": "Sistema socrático de 3 niveles. Si de verdad has intentado, avanzas rápido. Si buscas atajos, te devuelve a pensar."
+      },
+      {
+        "title": "Retienes lo aprendido con flashcards inteligentes",
+        "body": "Algoritmo científico FSRS (el mismo que Anki). Repasas justo cuando lo vas a olvidar. Máxima retención con mínimo esfuerzo."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "Por qué Estudia+",
+    "title": "Lo que ninguna otra app combina",
+    "items": [
+      {
+        "title": "Método socrático probado",
+        "body": "Estudios muestran 3× mejor aprendizaje que herramientas que dan respuestas directas. Aprendes a pensar por ti mismo."
+      },
+      {
+        "title": "Adaptado a tu sistema educativo",
+        "body": "IGCSE, IB, A-Levels, LOMLOE, ESO, AP. Estudia+ conoce los command words, los marks y el estilo de cada uno."
+      },
+      {
+        "title": "Flashcards con FSRS",
+        "body": "El mismo algoritmo científico que Anki. Programa cada repaso en el momento óptimo para máxima retención con mínimo tiempo."
+      },
+      {
+        "title": "Integridad académica integrada",
+        "body": "Filtro anti-trampa: si no lo has intentado primero, no obtienes ayuda. Diseñado para aprender, no para copiar."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Empieza gratis. Mejora cuando estés listo.",
+    "subtitle": "Sin permanencia. Cancela en un click.",
+    "studentNote": "¿Estudiante con carnet? Escríbenos y hablamos.",
+    "billingLabel": "Periodo de facturación",
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "Ahorra 17%",
+    "free": {
+      "label": "Gratis",
+      "period": "para siempre",
+      "cta": "Empezar ahora",
+      "features": [
+        "3 asignaturas activas",
+        "15 generaciones al mes",
+        "Coach de deberes (10 sesiones/día)",
+        "Flashcards con FSRS ilimitadas",
+        "5 simulacros al mes",
+        "Modo oscuro y automático"
+      ]
+    },
+    "premium": {
+      "label": "Premium",
+      "badge": "Más popular",
+      "cta": "Empezar Premium",
+      "perYear": "/año",
+      "perMonth": "/mes",
+      "monthlyEquivalent": "$2.50/mes",
+      "features": [
+        "Asignaturas ilimitadas",
+        "Generaciones ilimitadas",
+        "Coach de deberes ilimitado",
+        "Flashcards con FSRS ilimitadas",
+        "Simulacros ilimitados",
+        "Prioridad en respuestas IA",
+        "Nuevas funciones antes que nadie"
+      ]
+    }
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Todo lo que necesitas saber",
+    "items": [
+      {
+        "q": "¿Puedo usar Estudia+ en el móvil?",
+        "a": "Sí. Estudia+ es una PWA (Progressive Web App), lo que significa que puedes instalarla en iOS y Android como si fuera una app nativa, y funciona offline para lo esencial. No hace falta pasar por la App Store."
+      },
+      {
+        "q": "¿En qué idiomas está disponible?",
+        "a": "Español e inglés en la interfaz. El contenido de tus asignaturas puede estar en cualquier idioma que quieras, incluso mezclándolos: puedes tener «Biología» en español y «History» en inglés en la misma cuenta."
+      },
+      {
+        "q": "¿Es seguro para uso académico?",
+        "a": "Sí, está diseñado precisamente para proteger tu integridad académica. El Coach de Deberes tiene un filtro anti-atajos: si no has intentado resolver el ejercicio primero, no obtienes ayuda. Y las pistas son graduales, nunca soluciones directas. Estudia+ te ayuda a aprender, no a copiar."
+      },
+      {
+        "q": "¿Puedo cancelar cuando quiera?",
+        "a": "Sí, en un click desde tu perfil. Sin llamadas, sin correos, sin permanencia. Y si te has suscrito al plan anual, te devolvemos la parte no usada."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Aprende de verdad, no aprendas atajos.",
+    "copyright": "© 2026 Estudia+. Hecho con cuidado en España.",
+    "madeBy": "Hecho por estudiantes, para estudiantes.",
+    "soon": "Próximamente",
+    "soonSuffix": " (próximamente)",
+    "product": {
+      "title": "Producto",
+      "howItWorks": "Cómo funciona",
+      "features": "Features",
+      "pricing": "Precios",
+      "faq": "Preguntas"
+    },
+    "resources": {
+      "title": "Recursos",
+      "blog": "Blog",
+      "igcse": "Guía IGCSE",
+      "ib": "Guía IB",
+      "alevels": "Guía A-Levels"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookies": "Cookies",
+      "contact": "Contacto"
+    },
+    "socials": {
+      "x": "Estudia+ en X",
+      "instagram": "Estudia+ en Instagram",
+      "github": "Estudia+ en GitHub"
+    }
+  }
+}

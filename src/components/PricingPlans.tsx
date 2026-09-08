@@ -4,34 +4,19 @@ import { useId, useState } from "react";
 import { track } from "@vercel/analytics";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const APP_URL = "https://app.estudia.plus";
 
 type Billing = "monthly" | "yearly";
 
-const FREE_FEATURES = [
-  "3 asignaturas activas",
-  "15 generaciones al mes",
-  "Coach de deberes (10 sesiones/día)",
-  "Flashcards con FSRS ilimitadas",
-  "5 simulacros al mes",
-  "Modo oscuro y automático",
-];
-
-const PREMIUM_FEATURES = [
-  "Asignaturas ilimitadas",
-  "Generaciones ilimitadas",
-  "Coach de deberes ilimitado",
-  "Flashcards con FSRS ilimitadas",
-  "Simulacros ilimitados",
-  "Prioridad en respuestas IA",
-  "Nuevas funciones antes que nadie",
-];
-
-const PREMIUM_PRICE = {
-  yearly: { amount: "$30", period: "/año", note: "$2.50/mes" },
-  monthly: { amount: "$3", period: "/mes", note: null },
-} satisfies Record<Billing, { amount: string; period: string; note: string | null }>;
+/**
+ * El IMPORTE no se traduce (son dólares en los dos idiomas), pero el periodo y
+ * el equivalente mensual sí, así que salen del diccionario y aquí sólo queda la
+ * cifra.
+ */
+const PREMIUM_AMOUNT = { yearly: "$30", monthly: "$3" } satisfies Record<Billing, string>;
 
 function Check() {
   return (
@@ -50,12 +35,22 @@ function Check() {
   );
 }
 
-export default function PricingPlans() {
+export default function PricingPlans({
+  t,
+  locale,
+}: {
+  t: Dictionary["pricing"];
+  locale: Locale;
+}) {
   const [billing, setBilling] = useState<Billing>("yearly");
   const reduceMotion = useReducedMotion();
   const groupId = useId();
 
-  const price = PREMIUM_PRICE[billing];
+  const amount = PREMIUM_AMOUNT[billing];
+  const period = billing === "yearly" ? t.premium.perYear : t.premium.perMonth;
+  // El "$2.50/mes" sólo tiene sentido en el plan anual: es lo que sale al
+  // repartir los $30 entre doce meses.
+  const note = billing === "yearly" ? t.premium.monthlyEquivalent : null;
 
   return (
     <>
@@ -64,13 +59,13 @@ export default function PricingPlans() {
       <div className="mt-10 flex items-center justify-center gap-3">
         <div
           role="radiogroup"
-          aria-label="Periodo de facturación"
+          aria-label={t.billingLabel}
           className="inline-flex rounded-full border border-ink/15 bg-paper p-1"
         >
           {(
             [
-              ["monthly", "Mensual"],
-              ["yearly", "Anual"],
+              ["monthly", t.monthly],
+              ["yearly", t.yearly],
             ] as const
           ).map(([value, label]) => (
             <button
@@ -92,7 +87,7 @@ export default function PricingPlans() {
         </div>
 
         <span className="rounded-full bg-green/10 px-2 py-0.5 text-xs font-medium text-green">
-          Ahorra 17%
+          {t.save}
         </span>
       </div>
 
@@ -101,16 +96,16 @@ export default function PricingPlans() {
         <Reveal className="h-full">
           <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-paper p-8">
             <p className="text-sm font-medium uppercase tracking-wider text-ink-soft">
-              Gratis
+              {t.free.label}
             </p>
 
             <p className="mt-6 font-serif text-5xl font-semibold text-ink">$0</p>
-            <p className="mt-1 text-ink-soft">para siempre</p>
+            <p className="mt-1 text-ink-soft">{t.free.period}</p>
 
             <hr className="my-8 border-ink/10" />
 
             <ul className="flex flex-col gap-3 text-ink-soft">
-              {FREE_FEATURES.map((feature) => (
+              {t.free.features.map((feature) => (
                 <li key={feature} className="flex gap-3">
                   <span className="text-info">
                     <Check />
@@ -122,10 +117,10 @@ export default function PricingPlans() {
 
             <a
               href={APP_URL}
-              onClick={() => track("cta_free_click")}
+              onClick={() => track("cta_free_click", { locale })}
               className="mt-8 block rounded-full border border-ink px-8 py-3 text-center font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-bg"
             >
-              Empezar ahora
+              {t.free.cta}
             </a>
           </div>
         </Reveal>
@@ -135,10 +130,10 @@ export default function PricingPlans() {
           <div className="flex h-full flex-col rounded-2xl border-4 border-accent-dark bg-accent p-8 text-bg">
             <div className="flex items-start justify-between gap-4">
               <p className="text-sm font-medium uppercase tracking-wider">
-                Premium
+                {t.premium.label}
               </p>
               <span className="rounded-full bg-bg/20 px-3 py-1 text-xs font-medium">
-                Más popular
+                {t.premium.badge}
               </span>
             </div>
 
@@ -159,12 +154,12 @@ export default function PricingPlans() {
                   className="absolute inset-x-0 top-0"
                 >
                   <p className="font-serif text-5xl font-semibold">
-                    {price.amount}
+                    {amount}
                     <span className="ml-1 align-baseline text-lg font-medium">
-                      {price.period}
+                      {period}
                     </span>
                   </p>
-                  {price.note && <p className="mt-1 text-bg/80">{price.note}</p>}
+                  {note && <p className="mt-1 text-bg/80">{note}</p>}
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -172,7 +167,7 @@ export default function PricingPlans() {
             <hr className="my-8 border-bg/20" />
 
             <ul className="flex flex-col gap-3 text-bg/90">
-              {PREMIUM_FEATURES.map((feature) => (
+              {t.premium.features.map((feature) => (
                 <li key={feature} className="flex gap-3">
                   <Check />
                   {feature}
@@ -182,10 +177,10 @@ export default function PricingPlans() {
 
             <a
               href={`${APP_URL}?plan=premium`}
-              onClick={() => track("cta_premium_click", { billing })}
+              onClick={() => track("cta_premium_click", { billing, locale })}
               className="mt-8 block rounded-full bg-bg px-8 py-3 text-center font-medium text-accent transition-[filter] duration-200 hover:brightness-95"
             >
-              Empezar Premium
+              {t.premium.cta}
             </a>
           </div>
         </Reveal>

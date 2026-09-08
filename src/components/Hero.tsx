@@ -4,10 +4,18 @@ import { track } from "@vercel/analytics";
 import { motion, useReducedMotion } from "framer-motion";
 import HeroGradient from "@/components/HeroGradient";
 import CursorBlob from "@/components/CursorBlob";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
 
 const APP_URL = "https://app.estudia.plus";
 
-export default function Hero() {
+export default function Hero({
+  t,
+  locale,
+}: {
+  t: Dictionary["hero"];
+  locale: Locale;
+}) {
   const reduceMotion = useReducedMotion();
 
   /** fade + slideUp de entrada. Con reduced motion no devuelve props: el
@@ -41,17 +49,16 @@ export default function Hero() {
           {...rise(0)}
           className="font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-ink md:text-5xl lg:text-7xl"
         >
-          Aprende de verdad,
+          {t.titleLine1}
           <br />
-          no aprendas atajos.
+          {t.titleLine2}
         </motion.h1>
 
         <motion.p
           {...rise(0.15)}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl"
         >
-          El primer tutor IA que te enseña a estudiar, en lugar de darte las
-          respuestas.
+          {t.subtitle}
         </motion.p>
 
         <motion.div
@@ -61,13 +68,15 @@ export default function Hero() {
           <motion.a
             href={APP_URL}
             target="_self"
-            onClick={() => track("empezar_gratis_click", { section: "hero" })}
+            onClick={() =>
+              track("empezar_gratis_click", { section: "hero", locale })
+            }
             whileHover={hover}
             whileTap={tap}
             transition={springy}
             className="rounded-full bg-accent px-8 py-3 font-medium text-bg shadow-lg shadow-accent/20 transition-[filter,box-shadow] duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-accent/40"
           >
-            Empezar gratis →
+            {t.ctaPrimary}
           </motion.a>
 
           <motion.a
@@ -77,7 +86,7 @@ export default function Hero() {
             transition={springy}
             className="rounded-full border border-ink px-8 py-3 font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-bg"
           >
-            Ver cómo funciona
+            {t.ctaSecondary}
           </motion.a>
         </motion.div>
 
@@ -91,7 +100,7 @@ export default function Hero() {
               })}
           className="mt-6 text-sm text-ink-soft"
         >
-          Sin tarjeta. 30 segundos para empezar.
+          {t.note}
         </motion.p>
       </div>
     </section>

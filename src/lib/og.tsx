@@ -160,7 +160,8 @@ function Wordmark({ s }: { s: number }) {
 
 /**
  * Tarjeta social. La composición se define para un lienzo de 1200 de ancho y
- * se escala a partir de ahí, así que la misma función sirve para og y twitter.
+ * se escala a partir de ahí, así que la misma función sirve para og y twitter
+ * — y, desde el i18n, para los dos idiomas: los textos entran por props.
  *
  * Se renderiza al DOBLE de la medida nominal (2400×1260) a propósito. Satori
  * rasteriza el texto con un único píxel de antialiasing por borde: a 1200 de
@@ -169,7 +170,20 @@ function Wordmark({ s }: { s: number }) {
  * queda suave. Es supersampling: la nitidez la pone la resolución, no un
  * retoque de tipografía.
  */
-export function OgCard({ width, height }: { width: number; height: number }) {
+export function OgCard({
+  width,
+  height,
+  titleLine1,
+  titleLine2,
+  subtitle,
+}: {
+  width: number;
+  height: number;
+  /** El título va en dos líneas fijas: partirlo solo daría saltos feos. */
+  titleLine1: string;
+  titleLine2: string;
+  subtitle: string;
+}) {
   const s = width / 1200;
   const canvas = { width, height };
 
@@ -212,12 +226,12 @@ export function OgCard({ width, height }: { width: number; height: number }) {
             flexDirection: "column",
           }}
         >
-          <span>Aprende de verdad,</span>
-          <span>no aprendas atajos.</span>
+          <span>{titleLine1}</span>
+          <span>{titleLine2}</span>
         </div>
 
         <div style={{ marginTop: 30 * s, fontSize: 31 * s, color: INK_SOFT }}>
-          El primer tutor IA que te enseña a estudiar.
+          {subtitle}
         </div>
       </div>
 
