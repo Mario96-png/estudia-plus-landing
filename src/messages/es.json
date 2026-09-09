@@ -38,6 +38,84 @@
       }
     ]
   },
+  "interactiveDemo": {
+    "eyebrow": "Cómo enseña",
+    "title": "Útil ahora. Y en el examen sabes hacerlo tú.",
+    "subtitle": "Compara Estudia+ con lo que harías en ChatGPT. Este es un ejemplo real explicando la fotosíntesis.",
+    "replay": "Ver de nuevo",
+    "leftColumn": {
+      "label": "Con ChatGPT",
+      "messages": [
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "¿Puedes explicarme la fotosíntesis?"
+        },
+        {
+          "role": "ai",
+          "author": "ChatGPT",
+          "content": "La fotosíntesis es el proceso mediante el cual las plantas convierten dióxido de carbono (CO₂) y agua (H₂O) en glucosa (C₆H₁₂O₆) y oxígeno (O₂) utilizando la energía de la luz solar. Ocurre en los cloroplastos, específicamente en los tilacoides. La ecuación general es: 6CO₂ + 6H₂O + luz → C₆H₁₂O₆ + 6O₂. Este proceso tiene dos fases: fase luminosa y fase oscura (ciclo de Calvin)..."
+        }
+      ],
+      "footer": "Tienes la respuesta memorizada. En el examen tendrás que reproducirla sin entenderla."
+    },
+    "rightColumn": {
+      "label": "Con Estudia+",
+      "messages": [
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "¿Puedes explicarme la fotosíntesis?"
+        },
+        {
+          "role": "coach",
+          "author": "Coach Estudia+",
+          "content": "No te la doy hecha. Vamos a construirla juntos. Piensa esto: si dejas una planta 3 días sin luz, se muere. ¿Por qué crees que la luz es tan importante para ella?"
+        },
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "Para hacer algo... ¿su comida?"
+        },
+        {
+          "role": "coach",
+          "author": "Coach Estudia+",
+          "content": "¡Exacto! Las plantas fabrican su propia comida (glucosa). Ahora dime: para fabricarla, ¿qué necesita además de la luz? Piensa en lo que le echas cuando la riegas."
+        },
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "Agua 💧"
+        },
+        {
+          "role": "coach",
+          "author": "Coach Estudia+",
+          "content": "Perfecto. Ya tenemos luz ☀️ + agua 💧. Falta un tercer ingrediente que la planta coge del aire. Es lo que nosotros expulsamos al respirar. ¿Sabes qué es?"
+        },
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "¿CO₂?"
+        },
+        {
+          "role": "coach",
+          "author": "Coach Estudia+",
+          "content": "Exacto. Y ahora la parte bonita: como resultado suelta un «residuo» que a nosotros nos viene MUY bien. ¿Cuál será?"
+        },
+        {
+          "role": "user",
+          "author": "Tú",
+          "content": "¡Oxígeno!"
+        },
+        {
+          "role": "coach",
+          "author": "Coach Estudia+",
+          "content": "Correcto. Y ahora no memorizaste la ecuación: la ENTIENDES. Sabes por qué la planta necesita cada ingrediente y por qué produce oxígeno."
+        }
+      ],
+      "footer": "Guiado, no resuelto. En el examen sabrás explicarlo con tus palabras."
+    }
+  },
   "howItWorks": {
     "eyebrow": "Cómo funciona",
     "title": "Del atasco a dominar el tema, en 3 pasos",

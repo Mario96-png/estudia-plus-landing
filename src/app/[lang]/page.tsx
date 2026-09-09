@@ -4,6 +4,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import InteractiveDemo from "@/components/InteractiveDemo";
 import HowItWorks from "@/components/HowItWorks";
 import WhenToUse from "@/components/WhenToUse";
 import Features from "@/components/Features";
@@ -28,6 +29,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <Navbar t={t.nav} locale={lang} />
       <Hero t={t.hero} locale={lang} />
       <Problem t={t.problem} />
+      <InteractiveDemo t={t.interactiveDemo} locale={lang} />
       <HowItWorks t={t.howItWorks} />
       <WhenToUse t={t.whenToUse} />
       <Features t={t.features} />

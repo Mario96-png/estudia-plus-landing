@@ -38,6 +38,84 @@
       }
     ]
   },
+  "interactiveDemo": {
+    "eyebrow": "How it teaches",
+    "title": "Useful now. And on exam day you can do it yourself.",
+    "subtitle": "Compare Estudia+ to what you'd do in ChatGPT. This is a real example explaining photosynthesis.",
+    "replay": "Play again",
+    "leftColumn": {
+      "label": "With ChatGPT",
+      "messages": [
+        {
+          "role": "user",
+          "author": "You",
+          "content": "Can you explain photosynthesis?"
+        },
+        {
+          "role": "ai",
+          "author": "ChatGPT",
+          "content": "Photosynthesis is the process by which plants convert carbon dioxide (CO₂) and water (H₂O) into glucose (C₆H₁₂O₆) and oxygen (O₂) using sunlight energy. It occurs in chloroplasts, specifically in the thylakoids. The general equation is: 6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂. This process has two phases: the light-dependent reactions and the Calvin cycle..."
+        }
+      ],
+      "footer": "You have the memorized answer. In the exam you'll have to reproduce it without understanding it."
+    },
+    "rightColumn": {
+      "label": "With Estudia+",
+      "messages": [
+        {
+          "role": "user",
+          "author": "You",
+          "content": "Can you explain photosynthesis?"
+        },
+        {
+          "role": "coach",
+          "author": "Estudia+ Coach",
+          "content": "I won't just tell you. Let's build it together. Think about this: if you leave a plant for 3 days without light, it dies. Why do you think light is so important to it?"
+        },
+        {
+          "role": "user",
+          "author": "You",
+          "content": "To make something... its food?"
+        },
+        {
+          "role": "coach",
+          "author": "Estudia+ Coach",
+          "content": "Exactly! Plants make their own food (glucose). Now tell me: to make it, what else does it need besides light? Think about what you give it when you water it."
+        },
+        {
+          "role": "user",
+          "author": "You",
+          "content": "Water 💧"
+        },
+        {
+          "role": "coach",
+          "author": "Estudia+ Coach",
+          "content": "Perfect. So we have light ☀️ + water 💧. There's a third ingredient the plant takes from the air. It's what we breathe out. Do you know what it is?"
+        },
+        {
+          "role": "user",
+          "author": "You",
+          "content": "CO₂?"
+        },
+        {
+          "role": "coach",
+          "author": "Estudia+ Coach",
+          "content": "Exactly. And now the beautiful part: as a result it releases a “waste” that's VERY good for us. What could it be?"
+        },
+        {
+          "role": "user",
+          "author": "You",
+          "content": "Oxygen!"
+        },
+        {
+          "role": "coach",
+          "author": "Estudia+ Coach",
+          "content": "Correct. And now you didn't memorize the equation: you UNDERSTAND it. You know why the plant needs each ingredient and why it produces oxygen."
+        }
+      ],
+      "footer": "Guided, not solved. On exam day you'll know how to explain it in your own words."
+    }
+  },
   "howItWorks": {
     "eyebrow": "How it works",
     "title": "From stuck to mastery, in 3 steps",

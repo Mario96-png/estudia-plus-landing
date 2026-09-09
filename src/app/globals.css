@@ -89,3 +89,29 @@ body {
     transition: none;
   }
 }
+
+/* --- Demo interactivo --------------------------------------------------
+   Los mensajes se pintan todos en el HTML y la animación sólo los destapa:
+   así el ejemplo entero está en la página para Google y para AT aunque la
+   secuencia no llegue a correr. El estado lo lleva React en data-shown. */
+
+.demo-msg {
+  transition:
+    opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.demo-msg[data-shown="false"] {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* Va después a propósito: misma especificidad, gana la última. */
+@media (prefers-reduced-motion: reduce) {
+  .demo-msg,
+  .demo-msg[data-shown="false"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
