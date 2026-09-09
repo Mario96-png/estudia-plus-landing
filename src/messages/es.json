@@ -56,6 +56,25 @@
       }
     ]
   },
+  "whenToUse": {
+    "eyebrow": "Cuándo funciona mejor",
+    "title": "Honestidad: no es magia para la semana del examen.",
+    "subtitle": "Estudia+ te construye conocimiento de verdad. Eso lleva tiempo. Estos son los momentos donde marca diferencia:",
+    "cards": [
+      {
+        "title": "Durante el trimestre",
+        "body": "Entiendes conceptos nuevos con el coach socrático, construyes flashcards del temario, y las repasas antes de que se te olviden. Aquí Estudia+ brilla."
+      },
+      {
+        "title": "Semanas antes del examen",
+        "body": "Repasas todo tu mazo FSRS, haces simulacros de tu sistema educativo, e identificas lagunas concretas para taladrar."
+      },
+      {
+        "title": "La noche antes del examen",
+        "body": "Aquí no somos lo mejor. Con pánico y sin tiempo, coge past papers del exam board, mark schemes, y taladra tus puntos débiles. Estudia+ te frena en ese momento, no ayuda."
+      }
+    ]
+  },
   "features": {
     "eyebrow": "Por qué Estudia+",
     "title": "Lo que ninguna otra app combina",
@@ -93,10 +112,10 @@
       "cta": "Empezar ahora",
       "features": [
         "3 asignaturas activas",
-        "15 generaciones al mes",
-        "Coach de deberes (10 sesiones/día)",
-        "Flashcards con FSRS ilimitadas",
-        "5 simulacros al mes",
+        "Estudia hasta 15 temas nuevos al mes",
+        "Habla con el coach 10 veces al día",
+        "Flashcards ilimitadas para repasar sin olvidar",
+        "5 exámenes de práctica al mes",
         "Modo oscuro y automático"
       ]
     },
@@ -109,10 +128,10 @@
       "monthlyEquivalent": "$2.50/mes",
       "features": [
         "Asignaturas ilimitadas",
-        "Generaciones ilimitadas",
-        "Coach de deberes ilimitado",
-        "Flashcards con FSRS ilimitadas",
-        "Simulacros ilimitados",
+        "Temas nuevos ilimitados",
+        "Habla con el coach sin límite",
+        "Flashcards ilimitadas para repasar sin olvidar",
+        "Exámenes de práctica ilimitados",
         "Prioridad en respuestas IA",
         "Nuevas funciones antes que nadie"
       ]

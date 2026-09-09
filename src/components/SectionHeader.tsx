@@ -31,7 +31,7 @@ export default function SectionHeader({
 
       {subtitle && (
         <Reveal delay={0.2}>
-          <p className="mt-4 text-ink-soft">{subtitle}</p>
+          <p className="mt-4 max-w-2xl text-ink-soft">{subtitle}</p>
         </Reveal>
       )}
 

@@ -56,6 +56,25 @@
       }
     ]
   },
+  "whenToUse": {
+    "eyebrow": "When it works best",
+    "title": "Honest truth: it's not magic for exam week.",
+    "subtitle": "Estudia+ builds real knowledge. That takes time. Here's when it makes the biggest difference:",
+    "cards": [
+      {
+        "title": "During the term",
+        "body": "You learn new concepts with the Socratic coach, build flashcards from your syllabus, and review them before you forget. This is where Estudia+ shines."
+      },
+      {
+        "title": "Weeks before the exam",
+        "body": "Review your entire FSRS deck, take practice exams from your syllabus, and identify specific gaps to drill."
+      },
+      {
+        "title": "The night before the exam",
+        "body": "This isn't our strong suit. In panic mode with no time, grab past papers from your exam board, mark schemes, and drill your weak points. Estudia+ slows you down here — that doesn't help."
+      }
+    ]
+  },
   "features": {
     "eyebrow": "Why Estudia+",
     "title": "What no other app puts together",
@@ -93,10 +112,10 @@
       "cta": "Start now",
       "features": [
         "3 active subjects",
-        "15 generations a month",
-        "Homework Coach (10 sessions/day)",
-        "Unlimited FSRS flashcards",
-        "5 mock exams a month",
+        "Study up to 15 new topics per month",
+        "Talk to the coach 10 times a day",
+        "Unlimited flashcards that never let you forget",
+        "5 practice exams per month",
         "Dark and automatic mode"
       ]
     },
@@ -109,10 +128,10 @@
       "monthlyEquivalent": "$2.50/month",
       "features": [
         "Unlimited subjects",
-        "Unlimited generations",
-        "Unlimited Homework Coach",
-        "Unlimited FSRS flashcards",
-        "Unlimited mock exams",
+        "Unlimited new topics",
+        "Talk to the coach without limits",
+        "Unlimited flashcards that never let you forget",
+        "Unlimited practice exams",
         "Priority AI responses",
         "New features before anyone else"
       ]
